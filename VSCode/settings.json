@@ -1,0 +1,233 @@
+{
+  // Editor general
+  "editor.fontFamily": "Cascadia Code, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabCompletion": "on",
+  "editor.aiStats.enabled": true,
+  "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "workbench.sideBar.location": "right",
+  "workbench.preferredDarkColorTheme": "JetBrains Rider Dark Theme",
+  "workbench.preferredLightColorTheme": "Default Light+",
+  "window.autoDetectColorScheme": true,
+
+  // Files & Languages (language-specific overrides)
+  "files.defaultLanguage": "powershell",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+
+  // Workbench & Appearance
+  // "workbench.colorTheme": "JetBrains Rider Dark Theme",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.location": "top",
+
+  // Window
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+
+  // Terminal
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+
+  // Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+
+  // Extensions & Tools
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Generate a commit message for the staged changes in the current repository."
+    },
+    {
+      "text": "Follow the Conventional Commits format and ensure the message is concise and descriptive."
+    },
+    {
+      "text": "If the commit introduces a breaking change, mark it as BREAKING CHANGE."
+    },
+    {
+      "text": "Be extremely detailed with the file changes and the reason for the change."
+    },
+    {
+      "text": "Use semantic versioning: `feat` for new features (minor), `fix` for bug fixes (patch), and indicate breaking changes (major)."
+    }
+  ],
+
+  // Chat & Agent settings
+  "chat.agent.maxRequests": 5000,
+  "chat.tools.autoApprove": true,
+  "chat.agentSessionsViewLocation": "view",
+  "chat.tools.terminal.autoApprove": {
+    "cd": true,
+    "echo": true,
+    "ls": true,
+    "pwd": true,
+    "cat": true,
+    "head": true,
+    "tail": true,
+    "findstr": true,
+    "wc": true,
+    "tr": true,
+    "cut": true,
+    "cmp": true,
+    "which": true,
+    "basename": true,
+    "dirname": true,
+    "realpath": true,
+    "readlink": true,
+    "stat": true,
+    "file": true,
+    "du": true,
+    "df": true,
+    "sleep": true,
+    "git status": true,
+    "git log": true,
+    "git show": true,
+    "git diff": true,
+    "Get-ChildItem": true,
+    "Get-Content": true,
+    "Get-Date": true,
+    "Get-Random": true,
+    "Get-Location": true,
+    "Write-Host": true,
+    "Write-Output": true,
+    "Split-Path": true,
+    "Join-Path": true,
+    "Start-Sleep": true,
+    "Where-Object": true,
+    "/^Select-[a-z0-9]/i": true,
+    "/^Measure-[a-z0-9]/i": true,
+    "/^Compare-[a-z0-9]/i": true,
+    "/^Format-[a-z0-9]/i": true,
+    "/^Sort-[a-z0-9]/i": true,
+    "column": true,
+    "/^column\\b.*-c\\s+[0-9]{4,}/": false,
+    "date": true,
+    "/^date\\b.*(-s|--set)\\b/": false,
+    "find": true,
+    "/^find\\b.*-(delete|exec|execdir|fprint|fprintf|fls|ok|okdir)\\b/": false,
+    "grep": true,
+    "/^grep\\b.*-(f|P)\\b/": false,
+    "sort": true,
+    "/^sort\\b.*-(o|S)\\b/": false,
+    "tree": true,
+    "/^tree\\b.*-o\\b/": false,
+    "/\\(.+\\)/": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/\\{.+\\}/": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/`.+`/": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "rm": false,
+    "rmdir": false,
+    "del": false,
+    "Remove-Item": false,
+    "ri": false,
+    "rd": false,
+    "erase": false,
+    "dd": false,
+    "kill": false,
+    "ps": false,
+    "top": false,
+    "Stop-Process": false,
+    "spps": false,
+    "taskkill": false,
+    "taskkill.exe": false,
+    "curl": true,
+    "wget": false,
+    "Invoke-RestMethod": false,
+    "Invoke-WebRequest": false,
+    "irm": false,
+    "iwr": false,
+    "chmod": false,
+    "chown": false,
+    "Set-ItemProperty": false,
+    "sp": false,
+    "Set-Acl": false,
+    "jq": false,
+    "xargs": false,
+    "eval": false,
+    "Invoke-Expression": false,
+    "iex": false,
+    "New-Item": true,
+    "npm run typecheck": true,
+    "npm run dev": true,
+    "npx": true,
+    "python -m http.server 8000": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "ForEach-Object": true,
+    "Set-Content": true,
+    "Get-ChildItem *.html | ForEach-Object { (Get-Content $_.Name) -replace '\\\\./index\\.html', '../../index.html' | Set-Content $_.Name }": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "Move-Item": true,
+    "npm install": true,
+    "dotnet build": true,
+    "dotnet ef": true,
+    "dotnet tool": true,
+    "dotnet new": true
+  },
+
+  // Azure & MCP
+  "@azure.argTenant": "",
+  "chat.mcp.serverSampling": {
+    "Azure MCP Server Provider: Azure MCP": {
+      "allowedDuringChat": true
+    }
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  // RedHat extension
+  "redhat.telemetry.enabled": true,
+
+  // Misc
+  "vscode-pets.theme": "forest",
+  "vscode-pets.petSize": "small",
+  "vscode-pets.throwBallWithMouse": true,
+
+  // .NET / Debug
+  "debug.openDebug": "neverOpen"
+}
